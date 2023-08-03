@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       PUBLISH_SUFFIX: snapshots
       MAVEN_USER: ${{ secrets.MAVEN_USER }}
@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 17.0.7+7
           cache: gradle
 
       - name: build
